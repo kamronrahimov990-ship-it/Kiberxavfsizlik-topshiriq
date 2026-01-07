@@ -3,7 +3,7 @@
 flowchart TD
     A[Start] --> B[public.pem faylni o‘qish]
     B --> C[Ochiq kalitni yuklash]
-    C --> D[Message = "Kamron Rahimov"]
+    C --> D[Message = "soz"]
     D --> E[Foydalanuvchidan Base64 imzo kiritish]
     E --> F[Base64 imzoni decode qilish]
     F --> G[Imzoni verify qilish]

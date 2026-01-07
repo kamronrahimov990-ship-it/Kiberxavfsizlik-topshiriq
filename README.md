@@ -1,14 +1,15 @@
 # Kiberxavfsizlik-topshiriq
 ```mermaid
 flowchart TD
-    A[Start] --> B[public.pem faylni o‘qish]
-    B --> C[Ochiq kalitni yuklash]
-    C --> D[Message = "soz"]
-    D --> E[Foydalanuvchidan Base64 imzo kiritish]
-    E --> F[Base64 imzoni decode qilish]
-    F --> G[Imzoni verify qilish]
-    G -->|To‘g‘ri| H[✔️ Imzo to‘g‘ri!]
-    G -->|Xato| I[❌ Imzo noto‘g‘ri!]
+    A[Start] --> B[Read public.pem file]
+    B --> C[Load public key]
+    C --> D[Set message: Kamron Rahimov]
+    D --> E[Input signature in Base64]
+    E --> F[Decode Base64 signature]
+    F --> G{Verify signature}
+    G -->|Valid| H[Signature is valid]
+    G -->|Invalid| I[Signature is invalid]
     H --> J[End]
     I --> J[End]
+
 ```
